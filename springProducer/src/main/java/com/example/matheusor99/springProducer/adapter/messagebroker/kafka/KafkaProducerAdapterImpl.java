@@ -2,17 +2,17 @@ package com.example.matheusor99.springProducer.adapter.messagebroker.kafka;
 
 import br.com.matheusor99.springProducer.People;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
 public class KafkaProducerAdapterImpl implements KafkaProducerAdapter {
 
-    private final KafkaTemplate<String, People> producer;
+    private final KafkaProducer<String, People> producer;
 
-    public KafkaProducerAdapterImpl(final KafkaTemplate<String, People> producer) {
+    public KafkaProducerAdapterImpl(final KafkaProducer<String, People> producer) {
         this.producer = producer;
     }
 
