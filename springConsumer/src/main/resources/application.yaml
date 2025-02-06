@@ -1,0 +1,12 @@
+server:
+  port: 5053
+
+kafka:
+  bootstrap-servers: localhost:9092
+  schema-registry-url: http://localhost:8081
+  group-id: people-group
+  auto-offset-reset: earliest
+  specific.avro.reader: true
+  key-serializer: org.apache.kafka.common.serialization.StringSerializer
+  value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+  topic-name-consumer: people-topic
