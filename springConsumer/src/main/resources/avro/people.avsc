@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "People",
-  "namespace": "br.com.matheusor99.springConsumer",
+  "namespace": "br.com.matheusor99.springProducer",
   "fields": [
     {
       "name": "id",
